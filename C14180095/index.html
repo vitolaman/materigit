@@ -3,11 +3,32 @@
 <head>
 	<title>Vito</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+
+
+ 	$( ".tombol" ).on('click', function() {
+	 	var d = new Date($(".date-pick2").val());
+	 	var e = new Date($(".date-pick").val());
+	 	var diff = (d - e) / (100*60*60*24)
+	  	alert( Math.round(diff) );
+	});
+
+	});
+	</script>
 </head>
 <body>
 <h1>Vito Varian Laman</h1>
 <h3>C14180095</h3>
 <h3>Aplikasi Mobile Berbasis Web</h3>
 <h3>Aplikasi Social Media</h3>
+  <label for="pick">pick:</label>
+  <input type="date" class="date-pick" name="pick">
+  <input type="date" class="date-pick2" name="pick">
+  <button class="tombol">Hitung</button>
+<button>A</button>
+<button>B</button>
+
+
 </body>
 </html>
