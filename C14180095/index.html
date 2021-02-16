@@ -8,7 +8,7 @@
 
 
  	$( ".tombol" ).on('click', function() {
-	 	var d = new Date();
+	 	var d = new Date($(".date-pick2").val());
 	 	var e = new Date($(".date-pick").val());
 	 	var diff = (d - e) / (100*60*60*24)
 	  	alert( Math.round(diff) );
@@ -22,6 +22,7 @@
 <h3>C14180095</h3>
   <label for="pick">pick:</label>
   <input type="date" class="date-pick" name="pick">
+  <input type="date" class="date-pick2" name="pick">
   <button class="tombol">Hitung</button>
 </body>
 </html>
